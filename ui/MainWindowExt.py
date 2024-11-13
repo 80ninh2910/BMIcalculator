@@ -7,8 +7,10 @@ class MainWindowExt(Ui_MainWindow):
         self.MainWindow = MainWindow
         self.setupSignalsAndSlots()
 
-    def showWindow(self):
+    def show(self):
         self.MainWindow.show()
 
     def setupSignalsAndSlots(self):
         pass
+
+
