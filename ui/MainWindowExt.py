@@ -1,4 +1,4 @@
-from BMI_Lib import CalBMI
+from BMI_Lib import Status, BMI
 from ui.MainWindow import Ui_MainWindow
 
 
@@ -16,5 +16,8 @@ class MainWindowExt(Ui_MainWindow):
     def Cal(self):
         height=float(self.lineEditheight.text())
         weight=float(self.lineEditweight.text())
-        bmi=CalBMI(height,weight)
+        status=Status(height,weight)
+        bmi=BMI(height,weight)
+        self.lineEditBMI.setText(f"{bmi}")
+        self.lineEditStatus.setText(f"{status}")
 
