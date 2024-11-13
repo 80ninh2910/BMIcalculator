@@ -1,3 +1,4 @@
+from BMI_Lib import CalBMI
 from ui.MainWindow import Ui_MainWindow
 
 
@@ -11,4 +12,9 @@ class MainWindowExt(Ui_MainWindow):
         self.MainWindow.show()
 
     def setupSignalsAndSlots(self):
-        pass
+        self.pushButtoncal.clicked.connect(self.Cal)
+    def Cal(self):
+        height=float(self.lineEditheight.text())
+        weight=float(self.lineEditweight.text())
+        bmi=CalBMI(height,weight)
+
