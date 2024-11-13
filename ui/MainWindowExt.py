@@ -1,3 +1,5 @@
+import traceback
+
 from BMI_Lib import Status, BMI
 from ui.MainWindow import Ui_MainWindow
 
@@ -15,12 +17,15 @@ class MainWindowExt(Ui_MainWindow):
         self.pushButtoncal.clicked.connect(self.Cal)
 
     def Cal(self):
-        height=float(self.lineEditheight.text())
-        weight=float(self.lineEditweight.text())
-        status=Status(height,weight)
-        bmi=BMI(height,weight)
-        self.lineEditBMI.setText(f"{bmi}")
-        self.lineEditStatus.setText(f"{status}")
+        try:
+            height=float(self.lineEditheight.text())
+            weight=float(self.lineEditweight.text())
+            status=Status(height,weight)
+            bmi=BMI(height,weight)
+            self.lineEditBMI.setText(f"{round(bmi,1)}")
+            self.lineEditStatus.setText(f"{status}")
+        except:
+            traceback.print_exc()
 
     def process_clear(self):
         self.lineEditweight.setText("")
