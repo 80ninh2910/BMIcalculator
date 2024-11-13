@@ -93,7 +93,7 @@
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pushButtoncal">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -115,7 +115,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="pushButtonRe">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -137,7 +137,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushButtonEx">
        <property name="font">
         <font>
          <pointsize>10</pointsize>
@@ -253,5 +253,22 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButtonEx</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>275</x>
+     <y>217</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>192</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
