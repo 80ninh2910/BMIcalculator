@@ -1,4 +1,3 @@
-import math
 def CalBMI(height,weight):
     BMI=weight/(height*height)
     if BMI<18.5:
