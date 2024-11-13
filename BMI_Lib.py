@@ -1,4 +1,4 @@
-def CalBMI(height,weight):
+def Status(height,weight):
     BMI=weight/(height*height)
     if BMI<18.5:
         return "thin"
@@ -8,3 +8,6 @@ def CalBMI(height,weight):
         return "fat"
     else:
         return "obesity"
+def BMI(height,weight):
+    bmi=(weight/(height*height))
+    return bmi
