@@ -18,8 +18,8 @@ class MainWindowExt(Ui_MainWindow):
 
     def Cal(self):
         try:
-            height=float(self.lineEditheight.text())
-            weight=float(self.lineEditweight.text())
+            height=float(self.doubleSpinBoxHeight.text().replace("m", "").strip())
+            weight=float(self.doubleSpinBoxWeight.text().replace("kg", "").strip())
             status=Status(height,weight)
             bmi=BMI(height,weight)
             self.lineEditBMI.setText(f"{round(bmi,1)}")
@@ -28,11 +28,11 @@ class MainWindowExt(Ui_MainWindow):
             traceback.print_exc()
 
     def process_clear(self):
-        self.lineEditweight.setText("")
-        self.lineEditheight.setText("")
+        self.doubleSpinBoxHeight.setText("")
+        self.doubleSpinBoxWeight.setText("")
         self.lineEditStatus.setText("")
         self.lineEditBMI.setText("")
-        self.lineEditweight.setFocus()
+        self.doubleSpinBoxWeight.setFocus()
 
     def show(self):
         self.MainWindow.show()
