@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(436, 474)
+        MainWindow.resize(436, 517)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(parent=self.centralwidget)
@@ -126,6 +126,10 @@ class Ui_MainWindow(object):
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 0, 0, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(140, 410, 131, 51))
+        self.pushButton.setStyleSheet("font: 75 12pt \"MS Shell Dlg 2\";")
+        self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 436, 26))
@@ -153,3 +157,4 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "RESULT"))
         self.label_6.setText(_translate("MainWindow", "YOUR STATUS:"))
         self.label_5.setText(_translate("MainWindow", "YOUR BMI:"))
+        self.pushButton.setText(_translate("MainWindow", "HOW TO USE"))
