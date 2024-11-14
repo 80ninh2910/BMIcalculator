@@ -45,11 +45,24 @@
      <rect>
       <x>80</x>
       <y>50</y>
-      <width>231</width>
+      <width>254</width>
       <height>131</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="QDoubleSpinBox" name="doubleSpinBoxWeight">
+       <property name="suffix">
+        <string>kg</string>
+       </property>
+       <property name="decimals">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <double>1000.000000000000000</double>
+       </property>
+      </widget>
+     </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_3">
        <property name="font">
@@ -74,18 +87,25 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEditweight"/>
-     </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEditheight"/>
+      <widget class="QDoubleSpinBox" name="doubleSpinBoxHeight">
+       <property name="suffix">
+        <string>m</string>
+       </property>
+       <property name="decimals">
+        <number>2</number>
+       </property>
+       <property name="maximum">
+        <double>3.000000000000000</double>
+       </property>
+      </widget>
      </item>
     </layout>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>40</x>
       <y>180</y>
       <width>324</width>
       <height>41</height>
