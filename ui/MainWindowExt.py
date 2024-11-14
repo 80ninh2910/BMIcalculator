@@ -1,7 +1,7 @@
 import os
 import traceback
 
-from BMI_Lib import Status, BMI
+from ultis.BMI_Lib import Status, BMI
 from ui.MainWindow import Ui_MainWindow
 
 
