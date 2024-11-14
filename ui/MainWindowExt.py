@@ -1,3 +1,4 @@
+import os
 import traceback
 
 from BMI_Lib import Status, BMI
@@ -15,6 +16,8 @@ class MainWindowExt(Ui_MainWindow):
 
     def setupSignalsAndSlots(self):
         self.pushButtoncal.clicked.connect(self.Cal)
+        self.pushButton.clicked.connect(self.openFile)
+        self.pushButtonRe.clicked.connect(self.process_clear)
 
     def Cal(self):
         try:
@@ -28,12 +31,17 @@ class MainWindowExt(Ui_MainWindow):
             traceback.print_exc()
 
     def process_clear(self):
-        self.doubleSpinBoxHeight.setText("")
-        self.doubleSpinBoxWeight.setText("")
+        self.doubleSpinBoxHeight.clear()
+        self.doubleSpinBoxWeight.clear()
         self.lineEditStatus.setText("")
         self.lineEditBMI.setText("")
         self.doubleSpinBoxWeight.setFocus()
 
     def show(self):
         self.MainWindow.show()
+
+    def openFile(self):
+        image_file_path = "D:/TEAMPROJECT/BMICalculator/images/chart.jpg"
+        os.startfile(image_file_path)
+
 
